@@ -1,6 +1,6 @@
 package day2;
 
-public class Question2 {
+public class Question1 {
 	 public static void main(String[] args) {
 
 	        int[] arr = {10, -9, 25, 7, 0};
