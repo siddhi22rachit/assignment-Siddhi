@@ -1,19 +1,24 @@
 package day2;
 
+import java.util.Scanner;
+
 public class Question1 {
-	 public static void main(String[] args) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-	        int[] arr = {10, -9, 25, 7, 0};
+        System.out.println("Enter choice (CtoF / FtoC):");
+        String choice = sc.next();
 
-	        int min = arr[0];
+        System.out.println("Enter temperature value:");
+        double value = sc.nextDouble();
 
-	        for (int i = 1; i < arr.length; i++) {
-	            if (arr[i] < min) {
-	                min = arr[i];
-	            }
-	        }
-
-	        System.out.println(min);
-	    }
-
-}
+        if (choice.equalsIgnoreCase("CtoF")) {
+            double f = (value * 9 / 5) + 32;
+            System.out.println("Fahrenheit = " + f);
+        } else if (choice.equalsIgnoreCase("FtoC")) {
+            double c = (value - 32) * 5 / 9;
+            System.out.println("Celsius = " + c);
+        } else {
+            System.out.println("Invalid choice");
+        }
+    }}
